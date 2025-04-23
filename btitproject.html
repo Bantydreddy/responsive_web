@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing: border-box;
+      font-family: 'arial', sans-serif;
+    }
+    body{
+      color: #0a0909;
+      background-color: #dbd4d4;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .navbar{
+ 
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px;
+      margin: 0 auto;
+      background-color: rgb(16, 16, 16);
+      position: sticky;
+      top: 0;
+      width: 100%;
+    }
+
+    .logo{
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+      display: flex;
+      background-color: rgb(16,16,16);
+      justify-content: left;
+      align-items: center;
+      padding:10px ;
+    }
+
+    .hamburger {
+  font-size: 32px;
+  color: white;
+  cursor: pointer;
+  display: none;
+  margin-left: auto;
+  padding: 10px;
+}
+
+
+    .navbar-links{
+      display: flex;
+      list-style: none;
+      margin-left:auto;
+    }
+
+    .navbar-links li{
+      margin-left: 30px;
+    }
+
+    .navbar-links a{
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      font-size:18px;
+    }
+
+    .navbar-links li a:hover{
+      color:rgb(27, 68, 202);
+    }
+    
+    .container{
+      background: rgb(40, 133, 233);
+      text-align: center;
+      padding: 80px 20px;
+      color: white;
+    }
+
+    .container p{
+      font-size: 18px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .container h4{
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+    
+  .tooltip {
+  position: absolute;
+  background-color: white;
+  color: black;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  z-index: 1000;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  border: 1px solid #ccc;
+}
+
+
+    main section:last-child{
+     margin-top:20px;
+     margin-inline: 12%;
+     padding: 20px 0;
+     text-align: center;
+     background-color:rgb(236, 227, 227);
+     border-top: 1px solid #e0e0e0;
+     border-bottom: 1px solid #e0e0e0;
+     border-inline: 1px solid #e0e0e0;;
+     border-radius: 8px;
+    
+    }
+    
+    main section:last-child h3{
+     font-size: 28px;
+     margin-bottom: 20px;
+     color:#1a1a1a;
+    }
+    
+    main section:last-child p{
+     color:rgb(16, 16, 16);
+     line-height: 1.7;
+     padding-inline: 15px;
+     text-align: left;
+    }
+
+    footer{
+     background-color: rgb(16, 16, 16);
+     color:#ffffff;
+     text-align: center;
+     margin-top:auto;
+     width:100%;
+     padding: 15px;
+    }
+
+    footer p{
+      font-size: 14px;
+    }
+
+ @media (max-width:768px){
+      
+  .navbar{
+  padding :0.1px 10px;
+  }
+
+  .navbar-links {
+    display: none;
+    flex-direction: row;
+    background-color: rgb(35, 35, 35);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    box-sizing: border-box;
+    font-size: 20PX;
+    width: 100%;
+    margin: -0.5em;
+    padding:8px ;
+    padding-left:8%;
+    padding-Right:15%;
+    border:0;
+
+  }
+
+  .navbar-links::before {
+    content: '';
+    display: none;
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    width: 0;
+    height:0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid rgb(35, 35, 35);
+  }
+
+  .navbar-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 100;
+  }
+
+  .container{
+  padding: 60px 20px;
+  }
+
+  .container h4{
+  font-size:28px;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="navbar">
+      <div class="logo">MyWebsite</div>
+      <div class="hamburger" id="hamburger">&#9777;</div>
+      <ul class="navbar-links">
+        <li><a href="#Home">Home</a></li>
+        <li><a href="#About">About</a></li>
+        <li><a href="#Services">Services</a></li>
+        <li><a href="#Contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
+  
+
+  <main>
+    <section class="container">
+    <h4>Welcome to My Website</h4>
+    <p>Creating clean, responsive websites made simple</p>
+    </section>
+
+  <section>
+  <h3>Explore Our Services</h3>
+  <p>This is a simple responsive homepage built with HTML,CSS and JavaScript. The layout includes a sticky navbar, a colorful
+    banner, a main content section, and a footer. On smaller screens, the navbar collapses into a hamburger menu for better
+    accesibility. This template can be a great starting point for building professional websites or learning how layout 
+    responsiveness works.
+  </p>
+</section>
+ </main>
+
+  <footer>
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+  </footer>
+
+  <script>
+const navLinks = document.querySelectorAll('.navbar-links a');
+
+navLinks.forEach(link => {
+  link.addEventListener('mouseenter', () => {
+    const tooltip = document.createElement('div');
+    tooltip.className = 'tooltip';
+    tooltip.innerText = `Go to ${link.textContent}`;
+    document.body.appendChild(tooltip);
+
+    const rect = link.getBoundingClientRect();
+    tooltip.style.left = `${rect.left + rect.width / 2}px`;
+    tooltip.style.top = `${rect.bottom - 1}px`;
+  });
+
+  link.addEventListener('mouseleave', () => {
+    const tooltip = document.querySelector('.tooltip');
+    if (tooltip) tooltip.remove();
+  });
+});
+
+const hamburger = document.getElementById('hamburger');
+const navbarLinks = document.querySelector('.navbar-links');
+
+hamburger.addEventListener('click', (e) => {
+  e.stopPropagation();
+  navbarLinks.classList.toggle('show');
+  
+  if (navbarLinks.classList.contains('show')) {
+    hamburger.innerHTML = '&times;'; 
+
+    setTimeout(()=> {
+      document.addEventListener('click', closeMenu);
+    }, 0);
+  } else {
+    hamburger.innerHTML = '&#9777;'; 
+  }
+});
+
+function closeMenu(e){
+  if(!navbarLinks.contains(e.target) && e.target !== hamburger) {
+    navbarLinks.classList.remove('show');
+    hamburger.innerHTML = '&#9777;';
+    document.removeEventListener('click', closeMenu);
+  }
+}
+
+  </script>
+</body>
+</html>
